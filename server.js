@@ -14,9 +14,9 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use(express.static('public'));
 
-require("./routes/apiRoutes")(app);
+//Uncomment out below after the routes have been set up
+//require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
-
 
 mongoose.connect(
     process.env.MONGODB_URI || "mongodb://localhost/Workout-Tracker",
