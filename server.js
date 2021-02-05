@@ -1,16 +1,26 @@
-const express = require('express')
+const express = require('express');
 const mongoose = require('mongoose');
-const morgan = require('morgan')
+const morgan = require('morgan');
+
+
 require('dotenv').config()
 
-//require("./routes/apiRoutes")(app);
-//require("./routes/htmlRoutes")(app);
+const app = express();
 const PORT = process.env.PORT || 3000;
+
+app.use(morgan("dev"));
+
+app.use(express.urlencoded({extended:true}));
+app.use(express.json());
+app.use(express.static('public'));
+
+require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
+
 
 mongoose.connect(
     process.env.MONGODB_URI || "mongodb://localhost/Workout-Tracker",
     {
-        
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useCreateIndex: true,
@@ -18,3 +28,10 @@ mongoose.connect(
     }
   );
   console.log(process.env.MONGODB_URI)
+
+app.listen(PORT, () => {
+	console.log(`App running on port ${PORT}!`);
+});
+
+
+  
