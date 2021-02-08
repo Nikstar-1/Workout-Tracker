@@ -3,13 +3,13 @@ const app = require("../server.js");
 
 
 app.get("/api/workouts", (req, res) => {
-  /*Workout.find()
+  Workout.find()
     .then((dbWorkout) => {
       res.json(dbWorkout);
     })
     .catch((err) => {
       res.json(err);
-    });*/
+    });
     res.send("I'm working")
 });
 
@@ -25,4 +25,4 @@ app.put("/api/workouts/:id", (req, res) => {
   });
 });
 
-module.exports = app;
+module.exports = router;

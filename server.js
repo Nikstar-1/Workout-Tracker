@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
-
+//const apiRoutes = require("./routes/apiRoutes");
 
 require('dotenv').config()
 
@@ -14,7 +14,9 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use(express.static('public'));
 
-//Uncomment out below after the routes have been set up
+
+//app.use(apiRoutes); 
+
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
