@@ -2,6 +2,7 @@ const path = require("path");
 const app = require("../server.js");
 
 
+module.exports = function (app) {
 app.get("/api/workouts", (req, res) => {
   Workout.find()
     .then((dbWorkout) => {
@@ -12,8 +13,9 @@ app.get("/api/workouts", (req, res) => {
     });
     res.send("I'm working")
 });
-
+}
 app.put("/api/workouts/:id", (req, res) => {
+    
   let ongoingWorkoutId = req.params.id;
   console.log(ongoingWorkoutId);
 
@@ -25,4 +27,4 @@ app.put("/api/workouts/:id", (req, res) => {
   });
 });
 
-module.exports = router;
+
