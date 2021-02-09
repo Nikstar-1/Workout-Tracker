@@ -13,7 +13,6 @@ app.get("/api/workouts", (req, res) => {
     .catch((err) => {
       res.json(err);
     });
-    res.send("I'm working")
 });
 }
 app.put("/api/workouts/:id", (req, res) => {
@@ -30,3 +29,9 @@ app.put("/api/workouts/:id", (req, res) => {
 });
 
 
+app.post("/api/workouts", (req, res) => {
+    db.Workout.create({})
+    .then((newWorkout) => {
+      res.json(newWorkout);
+    });
+  });
