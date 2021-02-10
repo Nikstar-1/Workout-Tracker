@@ -2,7 +2,7 @@ const path = require("path");
 const express = require("express");
 const app = express();
 
-const config = require('/models/workout.js');
+const Workout = require('../models/workout.js');
 
 module.exports = function (app) {
   app.get("/api/workouts", (req, res) => {
