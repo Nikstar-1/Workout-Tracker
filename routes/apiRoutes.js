@@ -14,7 +14,7 @@ module.exports = function (app) {
         res.json(err);
       });
   });
-};
+
 app.put("/api/workouts/:id", (req, res) => {
   let ongoingWorkoutId = req.params.id;
   console.log(ongoingWorkoutId);
@@ -43,4 +43,4 @@ app.get("/api/workouts/range", (req, res) => {
       res.json(err);
     });
 });
- 
+}; 
