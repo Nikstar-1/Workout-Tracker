@@ -28,6 +28,7 @@ app.put("/api/workouts/:id", (req, res) => {
 });
 
 app.post("/api/workouts", (req, res) => {
+    res.send("i'm here!")
   db.Workout.create({}).then((newWorkout) => {
     res.json(newWorkout);
   });
@@ -42,3 +43,4 @@ app.get("/api/workouts/range", (req, res) => {
       res.json(err);
     });
 });
+ 

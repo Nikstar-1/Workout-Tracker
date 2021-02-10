@@ -97,6 +97,12 @@ function validateInputs() {
 
 async function handleFormSubmit(event) {
   event.preventDefault();
+  console.log(document.getElementById("cardio-name").value)
+  console.log({
+    nameInput: nameInput.value,
+    weightInput: weightInput.value,
+  })
+  
 
   let workoutData = {};
 
