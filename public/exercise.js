@@ -97,23 +97,7 @@ function validateInputs() {
 
 async function handleFormSubmit(event) {
   event.preventDefault();
-  //console.log(document.getElementById("cardio-name").value)
-  console.log({
-    nameInput: nameInput.value,
-    weightInput: weightInput.value,
-    setsInput: setsInput.value,
-    repsInput: repsInput.value,
-    durationInput: durationInput.value,
-    resistanceDurationInput: resistanceDurationInput.value,
-    distanceInput: distanceInput.value,
-    completeButton: completeButton.value,
-    addButton: addButton.value,
-    toast: toast.value,
-    newWorkout: newWorkout.value,
-
-  })
   
-
   let workoutData = {};
 
   if (workoutType === "cardio") {

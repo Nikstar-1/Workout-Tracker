@@ -21,7 +21,7 @@ require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
 mongoose.connect(
-    process.env.MONGODB_URI || "mongodb://localhost/Workout-Tracker",
+     "mongodb://localhost/Workout-Tracker",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
