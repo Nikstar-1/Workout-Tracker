@@ -7,13 +7,14 @@ const Workout = require('../models/workout.js');
 module.exports = function (app) {
   app.get("/api/workouts", (req, res) => {
     Workout.find()
-      .then((dbWorkout) => {
-        res.json(dbWorkout);
+      .then((Workout) => {
+        res.json(Workout);
       })
       .catch((err) => {
         res.json(err);
       });
   });
+
 
 app.put("/api/workouts/:id", (req, res) => {
   let ongoingWorkoutId = req.params.id;
@@ -28,14 +29,13 @@ app.put("/api/workouts/:id", (req, res) => {
 });
 
 app.post("/api/workouts", (req, res) => {
-    res.send("i'm here!")
-  db.Workout.create({}).then((newWorkout) => {
+  Workout.create({}).then((newWorkout) => {
     res.json(newWorkout);
   });
 });
 
 app.get("/api/workouts/range", (req, res) => {
-  db.Workout.find({})
+  Workout.find({})
     .then((workout) => {
       res.json(workout);
     })
