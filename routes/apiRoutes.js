@@ -28,9 +28,11 @@ module.exports = function (app) {
   });
 
   app.post("/api/workouts", (req, res) => {
+      console.log("post")
     Workout.create({}).then((newWorkout) => {
+        console.log({newWorkout})
       res.json(newWorkout);
-    });
+    }).catch(e => res.send(e.message));
   });
 
   app.get("/api/workouts/range", (req, res) => {
