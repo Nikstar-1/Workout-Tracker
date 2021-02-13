@@ -78,9 +78,8 @@ The application best serves those interested in exercise by allowing users to cr
 **Main.**
 !["Start Page"](assets/fitness.png "Start page.")
 
-!["Start Page"](..."Start page.")
+!["Start Page"](assets/stats.png "Start page.")
 
-!["Start Page"](... "Start page.")
 
 ### License
 
