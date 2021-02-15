@@ -80,6 +80,16 @@ The application best serves those interested in exercise by allowing users to cr
 
 !["Start Page"](assets/stats.png "Start page.")
 
+## View Project
+
+Check the link below for finished project.
+
+https://obscure-tor-50223.herokuapp.com/
+
+GitHub Link:
+
+https://github.com/Nikstar-1/Workout-Tracker
+
 
 ### License
 
