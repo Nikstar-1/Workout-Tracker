@@ -1,6 +1,6 @@
 ### Workout Tracker
 
-For this assignment, I have created a workout tracker. I worked along with front end code which required me to create a Mongo database with a Mongoose schema and handle routes with 
+Workout tracker application. I worked along with front end code which required me to create a Mongo database with a Mongoose schema and handle routes with 
 
 Express.
 
